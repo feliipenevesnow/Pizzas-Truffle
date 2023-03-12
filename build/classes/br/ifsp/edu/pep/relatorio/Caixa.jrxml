@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.6.0.final using JasperReports Library version 6.6.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Caixa" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="9c264d37-a780-42a4-9719-4b9f752a82e2">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="DataAdapter.xml"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<queryString>
+		<![CDATA[select u.nome,
+			c.data_abertura,
+			c.data_fechamento,
+			c.valor_final
+			from caixa c
+			join usuario u on(u.codigo = c.usuario)]]>
+	</queryString>
+	<field name="nome" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="nome"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="usuario"/>
+		<fieldDescription><![CDATA[usuario.nome]]></fieldDescription>
+	</field>
+	<field name="data_abertura" class="java.util.Date">
+		<property name="com.jaspersoft.studio.field.label" value="data_abertura"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="caixa"/>
+		<fieldDescription><![CDATA[dataAbertura]]></fieldDescription>
+	</field>
+	<field name="data_fechamento" class="java.util.Date">
+		<property name="com.jaspersoft.studio.field.label" value="data_fechamento"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="caixa"/>
+		<fieldDescription><![CDATA[dataFechamento]]></fieldDescription>
+	</field>
+	<field name="valor_final" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.label" value="valor_final"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="caixa"/>
+		<fieldDescription><![CDATA[valorFinal]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="81" splitType="Stretch">
+			<staticText>
+				<reportElement x="73" y="10" width="414" height="40" uuid="1278de69-ddae-473e-acc9-f4101195df5b"/>
+				<box bottomPadding="3">
+					<pen lineWidth="0.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PIZZA'S TRUFFLE]]></text>
+			</staticText>
+			<image>
+				<reportElement x="0" y="0" width="50" height="50" uuid="3704367d-da0b-47cf-86a8-7b5d5764bba0"/>
+				<imageExpression><![CDATA["file:/C:/Users/bolhe/JaspersoftWorkspace/Pizzas/icon/icons8-pizza-64.png"]]></imageExpression>
+			</image>
+			<line>
+				<reportElement x="0" y="50" width="560" height="1" uuid="6f872539-9335-4227-ac39-1c57f54d6174"/>
+			</line>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="460" y="51" width="100" height="30" uuid="63956be6-f316-4363-86b7-f3bb6e2e4696"/>
+				<textFieldExpression><![CDATA["Impresso em:"  + new java.text.SimpleDateFormat("dd/MM/yyyy").format(new Date())]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="80" width="560" height="1" uuid="ef9e5b0f-de90-45c0-a8dd-b6b0a1c7eeca"/>
+			</line>
+			<staticText>
+				<reportElement x="0" y="50" width="180" height="30" uuid="7e7b6297-3926-4932-b46c-8e87a1def98c"/>
+				<textElement>
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Relatório de Caixa]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="38" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="100" height="30" uuid="ff636586-f494-4f7f-8f74-3f8cb56140ce">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="81f2b677-2e96-4689-82d6-886edd64fcd4"/>
+				</reportElement>
+				<text><![CDATA[Usuário]]></text>
+			</staticText>
+			<line direction="BottomUp">
+				<reportElement x="110" y="0" width="1" height="37" uuid="0d3fd159-9e20-496c-a07f-61cfd452d256"/>
+			</line>
+			<staticText>
+				<reportElement x="130" y="0" width="100" height="30" uuid="6ee67189-f982-401f-9601-8db5e09dbff3">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a9aaf18a-48a3-482e-b872-67bb3e98f5ec"/>
+				</reportElement>
+				<text><![CDATA[Data Abertura]]></text>
+			</staticText>
+			<line direction="BottomUp">
+				<reportElement x="260" y="0" width="1" height="38" uuid="e4878298-0d64-420d-9273-fcd0355effd7"/>
+			</line>
+			<staticText>
+				<reportElement x="280" y="3" width="100" height="30" uuid="5e057258-bce5-41ea-860c-f2c01b560cd9">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="6dea8c19-5306-4d82-a431-affa2b5092a5"/>
+				</reportElement>
+				<text><![CDATA[Data Fechamento]]></text>
+			</staticText>
+			<line direction="BottomUp">
+				<reportElement x="410" y="0" width="1" height="37" uuid="4b0ac6d5-326c-40b1-88c6-3b756dccf605"/>
+			</line>
+			<staticText>
+				<reportElement x="430" y="0" width="100" height="30" uuid="6d16eaa6-f77c-412e-9fc0-54996f110d04">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="7134967f-da5d-470b-bcc1-9e3268e217c0"/>
+				</reportElement>
+				<text><![CDATA[Total]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="40" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="10" width="100" height="30" uuid="06ce6c2a-25fb-4dcf-aca2-a25a83094e30">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="81f2b677-2e96-4689-82d6-886edd64fcd4"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{nome}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="130" y="10" width="100" height="30" uuid="0f22e76c-ccb3-4a38-be9f-ca5f89da1103">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a9aaf18a-48a3-482e-b872-67bb3e98f5ec"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{data_abertura}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="280" y="10" width="100" height="30" uuid="1461365c-06ca-450f-b6be-4c7ae5201bb6">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="6dea8c19-5306-4d82-a431-affa2b5092a5"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{data_fechamento}== null ? "Caixa Aberto" : $F{data_fechamento}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="430" y="10" width="100" height="30" uuid="640b9b51-00e9-4789-984e-0759cdb10317">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="7134967f-da5d-470b-bcc1-9e3268e217c0"/>
+				</reportElement>
+				<textFieldExpression><![CDATA["R$ " + $F{valor_final}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="0" width="560" height="1" uuid="7e8c7cad-5e15-4598-8ff3-d613d37f877d"/>
+			</line>
+			<line direction="BottomUp">
+				<reportElement x="110" y="-3" width="1" height="43" uuid="3bb0f565-f021-4a15-9fb0-79b85352f222"/>
+			</line>
+			<line direction="BottomUp">
+				<reportElement x="260" y="1" width="1" height="39" uuid="364d9334-a480-4bb3-b07c-4f3ad8f26e82"/>
+			</line>
+			<line direction="BottomUp">
+				<reportElement x="410" y="0" width="1" height="40" uuid="dcd32092-0600-49ec-a983-ea73d266253c"/>
+			</line>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<textField>
+				<reportElement x="240" y="12" width="100" height="30" uuid="bbe5ab22-ada1-4520-9ecf-dc79e49cc918"/>
+				<textFieldExpression><![CDATA["Página : " + $V{PAGE_NUMBER} + " de " + $V{PAGE_COUNT}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="50" splitType="Stretch"/>
+	</summary>
+</jasperReport>

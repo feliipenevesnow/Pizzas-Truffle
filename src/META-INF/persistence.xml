@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+  <persistence-unit name="PizzasTrufflePU" transaction-type="RESOURCE_LOCAL">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <class>br.ifsp.edu.pep.model.Bebida</class>
+    <class>br.ifsp.edu.pep.model.BebidaCompra</class>
+    <class>br.ifsp.edu.pep.model.BebidaVenda</class>
+    <class>br.ifsp.edu.pep.model.Caixa</class>
+    <class>br.ifsp.edu.pep.model.Cliente</class>
+    <class>br.ifsp.edu.pep.model.Compra</class>
+    <class>br.ifsp.edu.pep.model.Despesa</class>
+    <class>br.ifsp.edu.pep.model.Entrega</class>
+    <class>br.ifsp.edu.pep.model.Entregador</class>
+    <class>br.ifsp.edu.pep.model.Fornecedor</class>
+    <class>br.ifsp.edu.pep.model.Ingrediente</class>
+    <class>br.ifsp.edu.pep.model.IngredienteCompra</class>
+    <class>br.ifsp.edu.pep.model.IngredientePizza</class>
+    <class>br.ifsp.edu.pep.model.Movimentacao</class>
+    <class>br.ifsp.edu.pep.model.Pagamento</class>
+    <class>br.ifsp.edu.pep.model.PagamentoDespesa</class>
+    <class>br.ifsp.edu.pep.model.PagamentoEntregador</class>
+    <class>br.ifsp.edu.pep.model.Pizza</class>
+    <class>br.ifsp.edu.pep.model.PizzaVenda</class>
+    <class>br.ifsp.edu.pep.model.Usuario</class>
+    <class>br.ifsp.edu.pep.model.Venda</class>
+    <class>br.ifsp.edu.pep.model.PedidoOnline</class>
+    <class>br.ifsp.edu.pep.model.PagarEntregador</class>
+    <shared-cache-mode>ALL</shared-cache-mode>
+    <properties>
+      <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/delivery?zeroDateTimeBehavior=CONVERT_TO_NULL"/>
+      <property name="javax.persistence.jdbc.user" value="root"/>
+      <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
+      <property name="javax.persistence.jdbc.password" value="Pa168645!"/>
+      <property name="javax.persistence.schema-generation.database.action" value="create"/>
+    </properties>
+  </persistence-unit>
+</persistence>
