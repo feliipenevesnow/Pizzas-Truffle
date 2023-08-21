@@ -13,3 +13,4 @@ Para acessar sua parte Web, onde os pedidos são feitos entre no meu repositóri
 
 ![Crud](https://user-images.githubusercontent.com/65624371/224577601-389be05b-6478-4434-a81f-82a7ab5c2e92.png)
 
+[Pizza's Truffle.pdf](https://github.com/feliipenevesnow/Pizzas-Truffle/files/12395377/Pizza.s.Truffle.pdf)
